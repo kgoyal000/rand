@@ -1,0 +1,41 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Smart Device Camera Template for HTML, CSS, JS and WebRTC">
+  <meta name="keywords" content="HTML,CSS,JavaScript, WebRTC, Camera">
+  <meta name="author" content="Kasper Kamperman">
+  <title>Random</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<input type="text" id="i1">
+<input type="text" id="i2">
+<input type="text" id="i3">
+<input type="text" id="i4">
+<input type="text" id="i5">
+<br>
+  <button onclick="rand()">click to generate</button>
+  <script>
+    var input1 = document.getElementById('i1');
+    var input2 = document.getElementById('i2');
+    var input3 = document.getElementById('i3');
+    var input4 = document.getElementById('i4');
+    var input5 = document.getElementById('i5');
+    function rand(){
+      
+      var arr = [];
+      while(arr.length < 5){
+          var r = Math.floor(Math.random() * 40) + 1;
+          if(arr.indexOf(r) === -1) arr.push(r);
+      }
+      input1.value = arr[0];
+      input2.value = arr[1];
+      input3.value = arr[2];
+      input4.value = arr[3];
+      input5.value = arr[4];
+      console.log(arr);
+    }
+  </script>
+</body>
+</html>
